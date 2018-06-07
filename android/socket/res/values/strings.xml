@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmartHome</string>
+    <string name="connect">连接</string>
+    <string name="serverip">服务器IP</string>
+    <string name="ip">115.29.109.104</string>
+
+</resources>

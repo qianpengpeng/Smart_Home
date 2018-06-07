@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home" >
+
+    <EditText
+        android:id="@+id/ethostip"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:gravity="center"
+        android:hint="@string/serverip"
+        android:inputType="text"
+        android:text="@string/ip" />
+    
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:id="@+id/window4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar1"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginRight="58dp"
+        android:background="@drawable/windowl1"
+        android:text="LED4" />
+
+    <Button
+        android:id="@+id/window3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/window4"
+        android:layout_alignBottom="@+id/window4"
+        android:layout_marginRight="12dp"
+        android:layout_toLeftOf="@+id/window4"
+        android:background="@drawable/windowl1"
+        android:text="LED3" />
+
+    <Button
+        android:id="@+id/window2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/window4"
+        android:layout_alignLeft="@+id/window4"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/windowh1"
+        android:text="LED2" />
+
+    <Button
+        android:id="@+id/window1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/window2"
+        android:layout_alignBottom="@+id/window2"
+        android:layout_alignLeft="@+id/window3"
+        android:background="@drawable/windowh1"
+        android:text="LED1" />
+
+    <Button
+        android:id="@+id/btshutdown"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ethostip"
+        android:layout_marginRight="7dp"
+        android:background="#FF0000"
+        android:text="断开"
+        android:textSize="15dip" />
+
+    <EditText
+        android:id="@+id/ethostport"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ethostip"
+        android:layout_alignBottom="@+id/ethostip"
+        android:layout_alignRight="@+id/btshutdown"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="服务器端口"
+        android:inputType="number"
+        android:text="6516" />
+
+    <TextView
+        android:id="@+id/t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/TEMP"
+        android:layout_below="@+id/TEMP"
+        android:layout_marginTop="7dp"
+        android:text="℃"
+        android:textColor="#FF0000" />
+
+    <Button
+        android:id="@+id/btconnect"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/btshutdown"
+        android:layout_alignBottom="@+id/btshutdown"
+        android:layout_toRightOf="@+id/HUMI"
+        android:background="#00CCFF"
+        android:text="连接"
+        android:textSize="15dip" />
+
+    <TextView
+        android:id="@+id/TEMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btshutdown"
+        android:layout_alignTop="@+id/window2"
+        android:layout_marginTop="21dp"
+        android:text="~"
+        android:textColor="#FF0000"
+        android:textSize="20dip" />
+
+    <TextView
+        android:id="@+id/h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/t"
+        android:layout_alignBottom="@+id/t"
+        android:layout_alignLeft="@+id/ethostip"
+        android:layout_marginLeft="7dp"
+        android:text="%"
+        android:textColor="#FF0000" />
+
+    <TextView
+        android:id="@+id/HUMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/t"
+        android:layout_alignRight="@+id/h"
+        android:text="~"
+        android:textColor="#FF0000"
+        android:textSize="20dip" />
+
+</RelativeLayout>
